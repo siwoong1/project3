@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Personal - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/GUN.png" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="text-gradien">제 3조 프로젝트 배틀그라운드</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home으로</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">데이터 전처리</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">모델링 과정 보기</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Q/A 문의하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page Content-->
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">입력 변수 과정</span></h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-11 col-xl-12 col-xxl-12">
+                        <!-- Experience Section-->
+                        <section>
+                            <div class="d-flex align-items-center justify-content-between mb-4">
+                                <h2 class="text-primary fw-bolder mb-0"><span class="text-gradient d-inline"></i>데이터 전처리, 각 변수들과 승리의 관계</span></h2>
+                                <!-- Download resume button-->
+                                <!-- Note: Set the link href target to a PDF file within your project-->
+                                <a class="btn btn-primary px-4 py-3" href="./download/train_V2-40x.csv">
+                                    <div class="d-inline-block bi bi-download me-2"></div>
+                                    Download Data set
+                                </a>
+                            </div>
+                            <!-- Experience Card first-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-emoji-angry-fill"></i>핵 유저 너 나와!</span></div>
+                                                <div class="small fw-bolder">핵 유저로 인한 승률에 미치는 악영향</div>
+                                                <div class="small text-muted">결측치와 이상치 제거<br>
+                                                     <br>우리는 <a href="#">Kaggle</a>에서 가져온 데이터를 참고하여<br>
+                                                     데이터 전처리를 진행하였다.<br>
+                                                     핵 사용에 대한 데이터는 입력 데이터에 포함되어 있지 않으므로<br>
+                                                     입력 변수에서 제외하였다.
+                                                    </div>
+                                                    </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/saida.gif" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 1-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-trash3"></i></i></i>이상치 제거하기</span></div>
+                                                <div class="small fw-bolder">데이터 이상치 제거</div>
+                                                <div class="small text-muted">입력 변수와 출력 변수의 관계를 시각화 해보니,<br>
+                                                     어렵지 않게 이상한 데이터를 발견할 수가 있었다.
+                                                     <br> 예를들어 걸음 수는 0인데 1킬 이상, 무기 소지, 운전 등<br>
+                                                     이러한 데이터들을 이상치로 판단했다.
+                                                     <br>
+                                                     <br>
+                                                     <br>
+                                                     WINPLACEPERC칼럼은 승률이다.<br>
+                                                     3조의 예측하고자하는 목표 변수 즉 종속 변수이다.
+                                                     또한 우리 프로젝트 3조는<br>
+                                                     1인에 대한 승률만 조사하기로 했고,<br>
+                                                     2(Duo),4(Squad)인조는 계산의 복잡성 및 데이터 부족으로 인해<br>
+                                                     칼럼에서 삭제를 하였고
+                                                     이로써 데이터 전처리는 완료했다.
+                                                    </div>
+                                                    </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/What.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Experience Card 1-->
+                             <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>적 플레이어를 사살하라!</span></div>
+                                            </div> 
+                                            <br>
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="small fw-bolder">미리 요약</div>
+                                                <div class="small text-muted">평균적으로 사람은 0.9345명의 플레이어를 죽이고,<br>
+                                                    99%의 사람들은 7.0명 이하의 킬을 기록했으며,<br>
+                                                     기록된 최대 킬 수는 60명이다.
+                                                     <br><br>그러나 이것이 직접적으로 승률과의 관계로<br>
+                                                     이어지는지는 아직 확인할 수 없다.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/kills0.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 2-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>킬 수와 승리와의 관계</span></div>
+                                                <div class="small fw-bolder">그룹별 킬수와 승리의 관계</div>
+                                                <div class="small text-muted">보이는 것과  같다.</div>
+                                                <div class="small text-muted">플레이어를 많이 죽이는 유저의 승률이 높았다.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/kills.jpg" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 3-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>플레이어들의 킬 수</span></div>
+                                                <div class="small text-muted">0킬이 가장 많은 비율을 차지한다.<br>(대부분의 유저가 1킬도 하지 못하고 죽음)
+                                                <br>그러나 킬수가 높은 유저가 곧 승률이 높다는 것은 아니다.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/kill_count.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 4-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>달리고 또 달려라!</span></div>
+                                            </div>
+                                            <br>
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="small fw-bolder">미리 요약</div>
+                                                <div class="small text-muted">평균적인 사람은 1055.1m를 걷고,<br>
+                                                     99%의 사람들은 4138.0m 이하를 걸은 반면,<br>
+                                                     걸음 최대 걸음 수는 17300.0m를 걸었다.</div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-lg-8">
+                                        <img src="./images/run0.jpg" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 5-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>플레이어들의 걷는 거리</span></div>
+                                                <div class="small fw-bolder">대부분의 사람들은 0걸음이다.</div>
+                                                <div class="small text-muted">이는 그들이 한 걸음도 내딛기도 전에 죽었다는 것을 의미한다.</div>
+                                                <div class="small text-muted">0킬과 마찬가지로 걸음걸이 또한 <br>0이 가장 많은 비율을 차지한다.<br></div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <br>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Walking.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 6-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>걸음걸이와 승리와의 관계</span></div>
+                                                <div class="small fw-bolder">상관관계가 확실하게 보인다.</div>
+                                                <div class="small text-muted">많이 걸은 사람일 수록</div>
+                                                <div class="small text-muted">승률에 가깝게 많이 나타나고 <br>이것이 의미하는 바는 승리를 위해서는<br>
+                                                    많이 걷는 것이 더욱 유리하다는 것이다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Walking1.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 7-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>운전은 역시 안전운전!</span></div>
+                                            </div>
+                                            <br>
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="small fw-bolder">미리 요약</div>
+                                                <div class="small text-muted">평균적인 사람은 423.9m를 운전하고, <br>
+                                                    99%의 사람들은 6,133.0m 이하를 운전한 반면, <br>
+                                                    운전 최고거리는 48,390m를 운전했다.<br>
+                                                   </div>
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Drive0.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 8-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>플레이어들의 운전거리</span></div>
+                                                <div class="small fw-bolder">대부분이 운전조차 하지 않았다.</div>
+                                                <div class="small text-muted">또한 먼 거리를 운전한 유저도 많진 않아보인다.</div>
+                                                <div class="small text-muted">운전 거리와 승리와의 관계를 <br>다시 알아보자.<br></div>
+                                            </div>
+                                            <br>
+                                        </div>
+                                        <br>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Ride.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Experience Card 9-->
+                             <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>플레이어들의 운전 거리</span></div>
+                                                <div class="small fw-bolder">운전거리와 승리와는?</div>
+                                                <div class="small text-muted">작은 상관 관계가 나타난다.</div>
+                                                <div class="small text-muted">Destroying 변수가 따로있었다. <br>알아보니 차량 파괴와 관련이 있었다.<br>
+                                                    그렇다면 차량 파괴와 승리의 관계가 어떻게 되는지 알아보자.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Drive.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 10-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>차량 파괴와 승리와의 관계</span></div>
+                                                <div class="small fw-bolder">차량 파괴와 승리와는?</div>
+                                                <div class="small text-muted">차량 파괴 숫자가 높을 수록 승리에 가까워진다.</div>
+                                                <div class="small text-muted">즉, 차량을 파괴하면 자동적으로 1킬 이상을 하게 되는 것이므로 승률과 관계가 확실히 나타난다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Destroys.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 11-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>수영은 역시 여름이 최고</span></div>
+                                                <div class="small fw-bolder">미리 요약</div>
+                                                <div class="small text-muted">평균적인 사람은 4.1m를 수영하고,<br>
+                                                    99%의 사람들은 116m 이하로 수영한 반면,<br>
+                                                    수영 최대 거리는 5286.0m를 수영했다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Swim0.jpg" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Experience Card 12-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>플레이어들의 수영 거리</span></div>
+                                                <div class="small fw-bolder">수영 거리와 승리와는?</div>
+                                                <div class="small text-muted">수영을하는 사람이 거의 없다.</div>
+                                                <div class="small text-muted">승률과의 관계를 한 번 보자</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Swim1.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 13-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>플레이어들의 그룹별 수영 거리</span></div>
+                                                <div class="small fw-bolder">그룹별 수영 거리이다.</div>
+                                                <div class="small text-muted">그러나 중요한 것을 놓쳐서는 안된다!</div>
+                                                <div class="small text-muted">현재 우리가 모은 PUBG의 DATA SET에는<br>
+                                                존재하는 맵이 총 3개이고 그 중 하나의 맵에는 물이 거의 없었다. <br>
+                                                그러한 이유로 수영은 변수의 항목에서 빼도록 하겠다. </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Swim2.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 14-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>아프면 청춘이 아니라 병원을 가!</span></div>
+                                                <div class="small fw-bolder">미리 요약</div>
+                                                <div class="small text-muted">평균적인 사람은 1.2개의 힐 아이템을 사용하고,<br>
+                                                     99%의 사람들은 11.0 이하를 사용하는 반면,
+                                                     <br> 가장 많이 사용한 사람은 59개를 사용했다.</div>
+                                                    </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/heal.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 15-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-right-square-fill"></i>치유냐 각성이냐</span></div>
+                                                <div class="small fw-bolder">치유 아이템과 각성 아이템의 승률</div>
+                                                <div class="small text-muted">데이터를 보니 두 아이템 모두,<br>
+                                                     확실히 사용을 잘 할 수록 승률이 높게 나오고 있다,
+                                                     <br> 근소한 차이로 각성제가 더 높은 승률을 가진다.<br>
+                                                    상황에 맞게 아이템을 잘 활용하는 것이 승률에 영향이 높게 나올 것이다.</div>
+                                                    </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/Heals_vs_Boosts.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Experience Card 15-->
+                            <div id="lastcd" class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-emoji-neutral"></i>데이터셋의 한계점</span></div>
+                                                <div class="small fw-bolder">자기장(시간초과), 다양한 맵에 대한 정보의 부재 </div>
+                                                <div class="small text-muted"><br> <br> 데이터셋에서 다른 맵들의 정보가 부족한 연유로<br>
+                                                    승률에 영향을 줄 것 같았던<br>
+                                                     자기장(시간초과) 데이터는 반영하지 못하였다.</div>
+                                                    </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/pubg4.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Education Section-->
+                        <section>
+                            <h2 class="text-secondary fw-bolder mb-4">Education</h2>
+                            <!-- Education Card 1-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-secondary fw-bolder mb-2">지도자</div>
+                                                <div class="mb-2">
+                                                    <div class="small fw-bolder">윤성혁 선생님</div>
+                                                    <div class="small text-muted">전반적인 모든 수업과 응원<br>
+                                                    격려와 기합, 위로와 배려 </div>
+                                                </div>
+                                                <div class="fst-italic">
+                                                    <div class="small text-muted">Dear.Seonghyeog yun</div>
+                                                    <div class="small text-muted">I love you</div> <br>
+                                                    <a href="github.com/solgitsx/YSHi2023">지도 과정 보기</a></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-8"><div><img src="./images/teacher.png"</div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Divider-->
+                        <div class="pb-5"></div>
+                        <!-- Skills Section-->
+                        <section>
+                            <!-- Skillset Card-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <!-- Professional skills list-->
+                                    <div class="mb-5">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-tools"></i></div>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">Tools and skills used</span></h3>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Visual Studio Code</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Github</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Spyder</div></div>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Pandas</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Machine learning and deep learning</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Chat GPT</div></div>
+                                        </div><br>
+                                        <div class="row row-cols-1 row-cols-md-3">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Photo Shop</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Power BI</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Power Point</div></div>
+                                        </div>
+                                    </div>
+                                    <!-- Languages list-->
+                                    <div class="mb-0">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 me-3"><i class="bi bi-code-slash"></i></div>
+                                            <h3 class="fw-bolder mb-0"><span class="text-gradient d-inline">languages Used</span></h3>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3 mb-4">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">HTML</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">CSS</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">JavaScript</div></div>
+                                        </div>
+                                        <div class="row row-cols-1 row-cols-md-3">
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Python</div></div>
+                                            <div class="col mb-4 mb-md-0"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Django</div></div>
+                                            <div class="col"><div class="d-flex align-items-center bg-light rounded-4 p-3 h-100">Excel</div></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <div class="d-flex">
+                            <button class="btn btn-outline-dark flex-shrink-0" type="button">
+                                <i class="bi bi-house"></i>
+                                <a href="index.html">home</a> 
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="text-center my-5">
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                    <a class="text-gradient" href="https://jwater000.github.io/bag"><i class="bi bi-github"></i></a>
+                                    <a class="text-gradient" href="https://www.instagram.com/93.04.09._"><i class="bi bi-instagram"></i></a>
+                                    <a class="text-gradient" href="https://siwoong1.github.io/PUBG1"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">연세 IT ACADEMY My Website since 2024 jan</div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!">Privacy</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Terms</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

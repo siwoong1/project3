@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/GUN.png" />
+        <!-- Custom Google font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100 bg-light">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white py-3">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="index.html"><span class="text-gradien">제 3조 프로젝트 배틀그라운드</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Home으로</a></li>
+                            <li class="nav-item"><a class="nav-link" href="resume.html">데이터 전처리</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html">모델링 과정 보기</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Q/A 문의하기</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Projects Section-->
+            <section class="py-5">
+                <div class="container px-5 mb-5">
+                    <div class="text-center mb-5">
+                        <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline"><i class="bi bi-bar-chart-fill"></i>데이터 가중치 확인 및 머신러닝,딥러닝</span></h1>
+                    </div>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-11 col-xxl-12 col-xxl-8">
+                            <!-- Experience Card 2-->
+                            <div class="card shadow border-0 rounded-4 mb-5">
+                                <div class="card-body p-5">
+                                    <div class="row align-items-center gx-5">
+                                        <div class="col text-center text-lg-start mb-4 mb-lg-0">
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="text-primary fw-bolder mb-2"><span class="text-gradient d-inline"><i class="bi bi-arrow-left-right"></i> &middot; &middot;승률과 변수들의 관계</span></div>
+                                            </div> 
+                                            <br>
+                                            <div class="bg-light p-4 rounded-4">
+                                                <div class="small fw-bolder">입력 변수는 뭐가 좋을까?</div>
+                                                <div class="small text-muted">각 특성(입력 변수)들과 승률(출력 변수)의 관계!<br>
+                                                    <br>
+                                                    <br>
+                                                    라쏘와 릿지 같은 선형 머신러닝 모델의 경우<br>
+                                                    상관 관계의 계수(가중치)를 비교하여<br>
+                                                    입력 변수를 찾아내는 과정이다.<br>
+                                                    결국 선형 머신러닝이란 이러한 과정을 통해<br>
+                                                    모델을 최적화하는 과정이다.</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-8">
+                                        <img src="./images/person.png" alt="이미지 없음" width="760px">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 1-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>라쏘 경로 - 각 특성의 가중치 변화</h2>
+                                            <h3>점선이 최적화 된 알파 값!</h3>
+                                            <p>라쏘의 모델을 사용하여 특성 별 가중치를 보았다.
+                                                <br>lasso_path(X_data_scaled, y_data, alphas=np.logspace(-4, 4, 100))
+                                                <br>위와 같은 코드를 사용하여 자동으로 규제 강도(alpha값)의 범위를 주어서
+                                                <br>모델을 최적화 하였다.
+                                                <br>라쏘의 경우 규제강도에 따라 특성을 제외 시키는 것이 가능하여
+                                                <br>중요도가 낮은 특성들을 0값으로 만들어냈다.(특성 제외)
+                                            </p>
+                                        </div>
+                                        <img src="./images/lasso_path.jpg" alt="이미지 없음" width="600px" height="400px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 2-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>라쏘 - 선택된 특성</h3>
+                                            <p>위에서 본 바와 같이 1과 -1에 가까운 중요 특성들을 골랐다.
+                                                <br>라쏘의 경우 24개의 특성 중에서 15개의 특성을 뽑아냈는데,
+                                                <br>이 15개 중에서도 다시 한 번 중요도를 나타냈다.
+                                                <br>Kills, Kill Place, Kill Streaks,Walk Distance
+                                                <br>등이 가장 높은 가중치를 나타냈다.
+                                            </p>
+                                        </div>
+                                        <img src="./images/selected.png" alt="이미지 없음" width="600px" height="400px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 3-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>승률의 실제값 vs 예측값</h3>
+                                            <p>전체(RED) 정답 데이터와 정답 데이터에서
+                                                <br>랜덤으로 추출한 샘플 100개를 오름차순으로 정렬하여 
+                                                <br>나타낸 각 정답(BLUE), 예측(YELLOW) 데이터이다.
+                                                <br>
+                                                <br>----------------------------------------------------
+                                                <br>
+                                                <br>평균 절대 오차 (MAE) - (라쏘) : 0.06813786459334907
+                                                <br>
+                                                <br>평균 제곱 오차 (MSE) - (라쏘)  : 0.008587379341827569
+                                                <br>
+                                                <br>R-squared (결정 계수) - (라쏘) : 0.9020343399239398
+                                            </p>
+                                        </div>
+                                        <img src="./images/winplaceperc.png" alt="이미지 없음" width="600px" height="400px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 4-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h2 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>릿지 경로 - 각 특성의 가중치 변화</h2>
+                                            <h3>점선이 최적화된 알파값!</h3>
+                                            <p>라쏘와 같이 규제강도(alpha) 값의 범위를 주고,
+                                                <br>이 과정에서 모델 정확도가 가장 높은
+                                                <br>알파 값을 찾아내는 과정을 시각화 하였다.
+                                                <br>라쏘에 비해 상관관계가 낮은 특성(column)을
+                                                <br>미세하게 고려하였다.
+                                                <br>따라서 릿지는 24개 특성 중 2개의 특성만 제외함.
+                                            </p>
+                                        </div>
+                                        <img src="./images/ridge_alpha.png" alt="이미지 없음" width="600px" height="400px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 5-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                              <div class="card-body p-0">
+                                 <div class="d-flex align-items-center">
+                                    <div class="p-5">
+                                     <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>릿지 - 선택된 특성</h3>
+                                      <p>릿지의 경우 중요도가 낮은 특성도<br>
+                                        미세하게 고려 할 수 있다.
+                                         <br>
+                                          <br>결과적으로 최적의 규제강도를 찾는 과정에서
+                                          <br>24개의 특성 중 22개를 중요 특성으로 결정했다.
+                                         <br>라쏘는 L1, 릿지는 L2의 규제를 사용하기에 이런 차이가 난다.
+                                         <br>라쏘와 릿지의 큰 차이이다.
+                                      </p>
+                                 </div>
+                                 <img src="./images/ridge_coefficients.png" alt="이미지 없음" width="600px" height="400px">
+                                    </div>
+                                 </div>
+                            </div>
+                            <!-- Project Card 6-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                    <div class="d-flex align-items-center">
+                                        <div class="p-5">
+                                            <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>승률의 실제값 vs 예측값</h3>
+                                            <p>전체(RED) 정답 데이터와 정답 데이터에서
+                                                <br>랜덤으로 추출한 샘플 100개를 오름차순으로 정렬하여 
+                                                <br>나타낸 각 정답(BLUE), 예측(YELLOW) 데이터이다.
+                                                <br>
+                                                <br>----------------------------------------------------
+                                                <br>
+                                                <br>
+                                                <br>평균 절대 오차 (MAE) - (릿지) : 0.06739291969656383
+                                                <br>
+                                                <br>평균 제곱 오차 (MSE) - (릿지)  : 0.00845346626479664
+                                                <br>
+                                                <br>R-squared (결정 계수) - (릿지) : 0.903562033351928
+                                                <br>
+                                                <br>라쏘 보다는 릿지가 미세하게 오차율도 낮고 정확도도 높다.
+                                            </p>
+                                        </div>
+                                        <img src="./images/winplaceperc_ridge.png" alt="이미지 없음" width="600px" height="400px">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Project Card 8-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>XGBoost 특성별 중요도</h3>
+                                        <p>XGBoost 가벼운 특징으로는 앙상블 모델로 구성을 하는 것이다.
+                                        <br>해당 과정에서 24개의 특성 중 21개를 중요 특성으로 결정했다.
+                                        <br>XGBoost 그라디언트는 L1, L2 규제를 디폴트로 적용하여
+                                        <br>alpha(L1규제)=0.1, lambda(L2규제)=0.01 으로 설정 되었다.
+                                        <br>이에 따라 특성의 중요도 또한 확연하게 차이가 보이는 모습을 볼 수 있다.
+                                        <br>자체적으로 교차 검증을 처리하기 때문에
+                                        <br>데이터 전처리에서도 유용하게 사용이 가능하다.
+                                        <br>XGBoost 걸음의 거리가 매우
+                                        <br> 중요하게 나타난 것을 볼 수가 있다.
+                                        </p>
+                                   </div>
+                                   <img src="./images/FeatureImportance_gra.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 8.5-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>그리드 서치를 통한 모델 최적화</h3>
+                                        <p><br>
+                                            <br>(XGBoost 부스트)<br><br>
+                                        Grid Search는 사전에 탐색할 값들을 미리 지정해주고,<br>
+                                        그 값들의 모든 조합을 바탕으로 성능의 최고점을 찾아준다.<br>
+                                        이 또한 디폴트 값이 존재하여 max_depth를 10과 20 으로 나누어<br>
+                                        설정하여 정확도를 비교하였다.<br>
+                                        결과로는 depth=10, estimators=100 일 때 <br>
+                                        모델이 최적화 됨을 확인하였다.<br>                                            
+                                        </p>
+                                   </div>
+                                   <img src="./images/grid_gra.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 9-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>승률의 실제값 vs 예측값</h3>
+                                        <p>전체(RED) 정답 데이터와 샘플 100개로 각 정답(BLUE) 예측(YELLOW) 데이터이다.
+                                            <br><br>
+                                            <br>----------------------------------------------------
+                                            <br><br>
+                                            <br>평균 절대 오차 (MAE) - (XGBoost 부스트) : 0.04051783149512922
+                                            <br>
+                                            <br>평균 제곱 오차 (MSE) - (XGBoost 부스트)  : 0.0031904464747962483
+                                            <br>
+                                            <br>R-squared (결정 계수) - (XGBoost 부스트) : 0.9636030758163484 
+                                        </p>
+                                   </div>
+                                   <img src="./images/winplaceperc_gra.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 10-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>랜덤 포레스트 특성별 중요도</h3>
+                                        <p><br>
+                                            랜덤 포레스트의 하이퍼 파라미터 값으로
+                                            Gini 중요도, MDA, Permutation Importance(조합)<br>
+                                            디폴트 값으로 특성별 중요도를 나타낸 그래프다.<br>
+                                            랜덤 포레스트의 경우 특이하게도, 팀킬의 중요도가 매우<br>
+                                            높게 나타났다. 이는 자살을 의미하는 것으로 다른 모델과는 달리<br>
+                                            랜덤 포레스트만이 이 특성의 중요성을 밝혀내었다.<br>
+                                            여기에서 결정 트리만의 특이한 장점을 볼 수 있다.
+                                        </p>
+                                   </div>
+                                   <img src="./images/features_rf.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 11-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>그리드 서치를 통한 모델 최적화</h3>
+                                       <br>(랜덤 포레스트)<br><br>
+                                       <p>Grid Search는 앞서 설명한 XGBoost와 같다.
+                                        </p>
+                                   </div>
+                                   <img src="./images/grid_rf.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 12-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>승률의 실제값 vs 예측값</h3>
+                                        <p>전체(RED) 정답 데이터와 샘플 100개로 각 정답(BLUE) 예측(YELLOW) 데이터이다.
+                                            <br><br>----------------------------------------------------
+                                            <br>
+                                            <br>
+                                            평균 절대 오차 (MAE) - (랜덤 포레스트): 0.042827041130037394
+                                            <br>
+                                            <br>
+                                            평균 제곱 오차 (MSE) - (랜덤 포레스트): 0.0037239872298574987
+                                            <br>
+                                            <br>
+                                            R-squared (결정 계수) - (랜덤 포레스트): 0.9575163909074306
+                                            <br>
+                                            <br>랜덤 포레스트보다 XGBoost 그라디언 부스트가 더 높게 나왔다.
+                                        </p>
+                                   </div>
+                                   <img src="./images/winplaceperc_rf.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 13-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>딥러닝 예측</h3>
+                                       <br>
+                                       <br>
+                                        <p>relu함수를 활용한 심층 신경망 5개의 레이어를 주어 학습하는 과정이다.
+                                            <br>왼쪽은 기본 디폴트값의 결과이고 오른쪽은 드롭아웃을 활용한 결과이다.
+                                            <br>손실값(loss)의 추이를 시각화 한 것인데,
+                                            <br>드롭아웃을 활용하면 초기에 확연하게 0값에 가까워지나, 결과적으로는
+                                            <br>정확도 및 오차율 차이에서 드롭아웃을 활용하지 않은 모델이
+                                            <br>더욱 정확한 결과를 나타냈다.
+                                        </p>
+                                   </div>
+                                   <img src="./images/deed_100.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 14-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>딥러닝 예측</h3>
+                                       <br>
+                                       <br>
+                                        <p> 에포크 200회를 돌인 결과 그래프이다.
+                                            <br><br>----------------------------------------------------
+                                            <br>
+                                            <br>validation_split=0.25을 통하여 트레인과 검증데이터 값을 비교<br>
+                                            200회 에포크 및 밸리데이션 데이터 검증을 통하여,
+                                            <br>모델을 최적화 시킨 결과이다.
+                                            <br>loss(MSE)= 0.0034608265850692987 의 오차율이 나왔고
+                                            <br>MAE= 0.04164329171180725 의 오차율이 나왔다.
+                                            <br>일반적인 경우로는 200회의 에포크를 돌리고 
+                                            <br>밸리데이션 검증 과정을 거친 두 번째 그래프의 오차가
+                                            <br>더 낮아야 함에도 불구하고 오히려 첫 번째가 더 낮았다.
+                                            <br>이를 과대적합이라 한다. 따라서 우리는 100회의 에포크를 돌린
+                                            <br>모델을 선택하였다.
+                                        </p>
+                                   </div>
+                                   <img src="./images/deep_200.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 14-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>최종 모델 별 비교 및 평가와 모델 선택</h3>
+                                       <h6>머신러닝과 딥러닝을 통한 최종적 결과들을 시각화했다.</h6>
+                                       <p>
+                                            <br>----------------------------------------------------
+                                            <br>
+                                            <br>머신러닝은 총 네가지의 모델로 
+                                            <br>선형 회귀와 앙상블을 통하여 검증을 하였다.
+                                            <br>해당 그래프는 엑셀을 통하여 만든 것이고
+                                            <br>비교를 해보자면 
+                                            <br>라쏘->릿지->랜덤포레스트->딥러닝->XGBoost
+                                            <br>순으로 오차및 결정 계수에서 정확도의 차이가 나타났고
+                                            <br>결과적으로 평가를 해보자면 우리의 데이터셋으로는
+                                            <br>XGBoost를 통한 XGBoost 모델이 가장 우수성을 보여,
+                                            <br>우리는 XGBoost를 최적의 모델로 선정하였다.
+                                            <br><a href="./Final_predict_model.pbix">powerbi</a>
+                                        </p>
+                                   </div>
+                                   <img src="./images/excel.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                            <!-- Project Card last-->
+                                <br>
+                                <br>
+                                <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                    <div class="card-body p-0">
+                                        <div class="d-flex align-items-center">
+                                            <div class="p-5">
+                                                <h2 class="fw-bolder">결론</h2>
+                                                <p>Kaggle에서 제공한 데이터 셋을 이용하였으며,<br>
+                                                    각 모델별 선택된 특성의 갯수가 달랐음.<br>
+                                                    딥러닝 등 일부 모델의 경우엔 모든 특성을 사용하였음.<br>
+                                                    하이퍼 파라미터 값에 따른 데이터 시각화를 통해 모델들을 비교하였음.<br>
+                                                    즉 모델에 의해 나온 예측값과 실제값의 비교를 통해<br>
+                                                    가장 오차가 낮고 정확도가 높은 모델인 XGBoost 부스트를 선택<br>
+                                                </p>
+                                            </div>
+                                            <div class="ms-auto"> <!-- ms-auto 클래스 추가 -->
+                                                <img src="./images/pubg6.png" alt="이미지 없음" width="300px" height="400px">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+            </section>
+            <section class="bg-light py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-xxl-8">
+                            <div class="text-center my-5">
+                                <h2 class="display-5 fw-bolder"><span class="text-gradient d-inline">About This Time</span></h2>
+                                <p class="lead fw-light mb-4">NO PAIN NO GAIN. </p>
+                                <p class="text-muted">배틀그라운드라는 게임에 대해서 깊게 알게되었고 . 각종 변수들에 대하여 승리와의 상관 관계를 알아보는 시간이었습니다. 고통 없이는 얻는 것도 없다는 의미를 알게 되는 프로젝트였습니다.</p>
+                                <div class="d-flex justify-content-center fs-2 gap-4">
+                                    <a class="text-gradient" href="https://jwater000.github.io/bag"><i class="bi bi-github"></i></a>
+                                    <a class="text-gradient" href="https://www.instagram.com/93.04.09._"><i class="<i class="bi bi-instagram"></i>"></i></a>
+                                    <a class="text-gradient" href="https://siwoong1.github.io/PUBG1"><i class="bi bi-github"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Call to action section-->
+            <section class="py-5 bg-gradient-primary-to-secondary text-white">
+                <div class="container px-5 my-5">
+                    <div class="text-center">
+                        <h2 class="display-4 fw-bolder mb-4">Let's build something together</h2>
+                        <a class="btn btn-outline-light btn-lg px-5 py-3 fs-6 fw-bolder" href="contact.html">문의하기</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-white py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0">연세 IT ACADEMY My Website since 2024 jan</div></div>
+                    <div class="col-auto">
+                        <a class="small" href="#!">Privacy</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="#!">Terms</a>
+                        <span class="mx-1">&middot;</span>
+                        <a class="small" href="contact.html">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
