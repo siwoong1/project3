@@ -203,18 +203,17 @@
                                         <br>해당 과정에서 24개의 특성 중 21개를 중요 특성으로 결정했다.
                                         <br>XGBoost 그라디언트는 L1, L2 규제를 디폴트로 적용하여
                                         <br>alpha(L1규제)=0.1, lambda(L2규제)=0.01 으로 설정 되었다.
-                                        <br>이에 따라 특성의 중요도 또한 확연하게 차이가 보이는 모습을 볼 수 있다.
-                                        <br>자체적으로 교차 검증을 처리하기 때문에
-                                        <br>데이터 전처리에서도 유용하게 사용이 가능하다.
-                                        <br>XGBoost 걸음의 거리가 매우
-                                        <br> 중요하게 나타난 것을 볼 수가 있다.
+                                        <br>이에 따라 특성의 중요도 또한 라쏘와 릿지와는 확연하게 
+                                        <br>차이가 보이는 모습을 볼 수 있다. 
+                                        <br>XGBoost 모델을 사용하여 자동으로 규제강도를 조절하였지만
+                                        <br>나머지 하이퍼 파라미터는 조절하지 않은 결과의 그래프이다.
                                         </p>
                                    </div>
                                    <img src="./images/FeatureImportance_gra.png" alt="이미지 없음" width="600px" height="400px">
                                       </div>
                                    </div>
                               </div>
-                              <!-- Project Card 8.5-->
+                            <!-- Project Card 8.9-->
                             <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
                                 <div class="card-body p-0">
                                    <div class="d-flex align-items-center">
@@ -224,13 +223,33 @@
                                             <br>(XGBoost 부스트)<br><br>
                                         Grid Search는 사전에 탐색할 값들을 미리 지정해주고,<br>
                                         그 값들의 모든 조합을 바탕으로 성능의 최고점을 찾아준다.<br>
-                                        이 또한 디폴트 값이 존재하여 max_depth를 10과 20 으로 나누어<br>
-                                        설정하여 정확도를 비교하였다.<br>
-                                        결과로는 depth=10, estimators=100 일 때 <br>
-                                        모델이 최적화 됨을 확인하였다.<br>                                            
+                                        이 또한 디폴트 값이 존재하여 n_estimators, max_depth,<br>
+                                        learning_rate, subsample, colsample_bytree<br>
+                                        이렇게 총 5가지의 하이퍼 파라미터를<br>
+                                        그리드 서치를 활용하여 최적의 값을 찾아냈다.<br>
+                                        </p>
+                                   </div>ㅍㅎ
+                                   <img src="./images/grid_gra.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                              <!-- Project Card 8.9-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>하이퍼파라미터 튜닝 결과</h3>
+                                        <p><br>
+                                            <br>(XGBoost 부스트)<br><br>
+                                        Grid Search를 이용하여 최적의 하이퍼 파라미터 값으로,<br>
+                                        다시 한번 특성별 중요도를 나타내었다.<br>
+                                        입력 변수들의 중요도가 조금씩 상이한 모습을 보인다.<br>
+                                        이는 하이퍼 파라미터를 튜닝하는 것이<br>
+                                        정확도 면에서 값이 달라지니 디폴트 값으로만 결과를 보는 것은<br>
+                                        판단이 정확하지가 않을 수 있다는 걸 알게 된 과정이었다.<br>                    
                                         </p>
                                    </div>
-                                   <img src="./images/grid_gra.png" alt="이미지 없음" width="600px" height="400px">
+                                   <img src="./images/FeatureImportance_gra1.png" alt="이미지 없음" width="600px" height="400px">
                                       </div>
                                    </div>
                               </div>
@@ -243,12 +262,16 @@
                                         <p>전체(RED) 정답 데이터와 샘플 100개로 각 정답(BLUE) 예측(YELLOW) 데이터이다.
                                             <br><br>
                                             <br>----------------------------------------------------
+                                            <br>
+                                            그리드 서치를 이용하기 전 결과
+                                            <br>평균 절대 오차 (MAE)  - (XGBoost 부스트) : 0.04051783149512922
+                                            <br>평균 제곱 오차 (MSE)  - (XGBoost 부스트)  : 0.0031904464747962483
+                                            <br>R-squared (결정 계수) - (XGBoost 부스트) : 0.9636030758163484
                                             <br><br>
-                                            <br>평균 절대 오차 (MAE) - (XGBoost 부스트) : 0.04051783149512922
-                                            <br>
-                                            <br>평균 제곱 오차 (MSE) - (XGBoost 부스트)  : 0.0031904464747962483
-                                            <br>
-                                            <br>R-squared (결정 계수) - (XGBoost 부스트) : 0.9636030758163484 
+                                            그리드 서치를 이용한 결과
+                                            <br>평균 절대 오차 (MAE)  - (XGBoost 부스트) : 0.040145618126023234
+                                            <br>평균 제곱 오차 (MSE)  - (XGBoost 부스트)  : 0.003151951309895043
+                                            <br>R-squared (결정 계수) - (XGBoost 부스트) : 0.9640422324075699
                                         </p>
                                    </div>
                                    <img src="./images/winplaceperc_gra.png" alt="이미지 없음" width="600px" height="400px">
@@ -262,13 +285,16 @@
                                       <div class="p-5">
                                        <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>랜덤 포레스트 특성별 중요도</h3>
                                         <p><br>
-                                            랜덤 포레스트의 하이퍼 파라미터 값으로
-                                            Gini 중요도, MDA, Permutation Importance(조합)<br>
-                                            디폴트 값으로 특성별 중요도를 나타낸 그래프다.<br>
-                                            랜덤 포레스트의 경우 특이하게도, 팀킬의 중요도가 매우<br>
-                                            높게 나타났다. 이는 자살을 의미하는 것으로 다른 모델과는 달리<br>
+                                            랜덤포레스트의 디폴트 값으로 나타낸 <br>
+                                            특성 중요도이다.<br>
+                                            아직 적정 하이퍼파라미터 값을 찾아내지 못하여<br>
+                                            다소 엉뚱한 그래프가 나타난 것으로 보이지만<br>
+                                            (팀킬의 중요도가 매우 높게 나타났다.)<br>
+                                            이는 자살을 의미하는 것으로 다른 모델과는 달리<br>
                                             랜덤 포레스트만이 이 특성의 중요성을 밝혀내었다.<br>
-                                            여기에서 결정 트리만의 특이한 장점을 볼 수 있다.
+                                            여기에서 결정 트리만의 특이한 장점을 볼 수 있다.<br>
+                                            이제 최적의 하이퍼 파라미터 값을 자동 계산해주는<br>
+                                            그리드 서치를 활용하여 다시 모델을 훈련시켜보겠다.
                                         </p>
                                    </div>
                                    <img src="./images/features_rf.png" alt="이미지 없음" width="600px" height="400px">
@@ -282,10 +308,41 @@
                                       <div class="p-5">
                                        <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>그리드 서치를 통한 모델 최적화</h3>
                                        <br>(랜덤 포레스트)<br><br>
-                                       <p>Grid Search는 앞서 설명한 XGBoost와 같다.
+                                       Grid Search는 사전에 탐색할 값들을 미리 지정해주고,<br>
+                                        그 값들의 모든 조합을 바탕으로 성능의 최고점을 찾아준다.<br>
+                                        이 또한 디폴트 값이 존재하여 랜덤 포레스트의 경우엔<br>
+                                        max_depth, min_samples_split, min_samples_leaf,<br>
+                                        max_features 이렇게 4가지의 하이퍼 파라미터를<br>
+                                        그리드 서치를 활용하여 최적의 값을 찾아냈다.<br>
+                                        결과적으로 랜덤 포레스트가 가질 수 있는 최적의 하이퍼 파라미터 값을<br>
+                                        찾아냈지만 이는 무조건적으로 최고의 결과를 도출하지는 않는다.
                                         </p>
                                    </div>
                                    <img src="./images/grid_rf.png" alt="이미지 없음" width="600px" height="400px">
+                                      </div>
+                                   </div>
+                              </div>
+                               <!-- Project Card 11.5-->
+                            <div class="card overflow-hidden shadow rounded-4 border-0 mb-5">
+                                <div class="card-body p-0">
+                                   <div class="d-flex align-items-center">
+                                      <div class="p-5">
+                                       <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i> 하이퍼파라미터 튜닝 결과</h3>
+                                        <p>전체(RED) 정답 데이터와 샘플 100개로 각 정답(BLUE) 예측(YELLOW) 데이터이다.
+                                            <br><br>----------------------------------------------------
+                                            <br>
+                                            <br>(랜덤 포레스트)<br><br>
+                                        Grid Search를 이용하여 최적의 하이퍼 파라미터 값으로,<br>
+                                        다시 한번 특성별 중요도를 나타내었다.<br>
+                                        이번엔 이전 그래프와 다른 양상을 띠고있다,<br>
+                                        하이퍼 파라미터의 최적의 값과 디폴트 값의 차이가<br>
+                                        이렇게나 다른 결과를 보인다는 것은<br>
+                                        디폴트와, 튜닝값을 어떻게 조절하느냐에 따라<br>
+                                        결과 값이 달라질 수가 있다.<br>                 
+                                        </p>
+                                        </p>
+                                   </div>
+                                   <img src="./images/features_rf1.png" alt="이미지 없음" width="600px" height="400px">
                                       </div>
                                    </div>
                               </div>
@@ -296,18 +353,22 @@
                                       <div class="p-5">
                                        <h3 class="fw-bolder"><i class="bi bi-bar-chart-fill">  </i>승률의 실제값 vs 예측값</h3>
                                         <p>전체(RED) 정답 데이터와 샘플 100개로 각 정답(BLUE) 예측(YELLOW) 데이터이다.
-                                            <br><br>----------------------------------------------------
+                                            <br><br>
+                                            <br>----------------------------------------------------
                                             <br>
+                                            그리드 서치를 이용하기 전 결과<br>
+                                            <br>평균 절대 오차 (MAE)  - (랜덤 포레스트): 0.042827041130037394
+                                            <br>평균 제곱 오차 (MSE)  - (랜덤 포레스트): 0.0037239872298574987
+                                            <br>R-squared (결정 계수) - (랜덤 포레스트): 0.9575163909074306
+                                            <br><br>
                                             <br>
-                                            평균 절대 오차 (MAE) - (랜덤 포레스트): 0.042827041130037394
+                                            그리드 서치를 이용한 결과<br>
+                                            <br>평균 절대 오차 (MAE)  - (랜덤 포레스트) : 0.04423737675991321
+                                            <br>평균 제곱 오차 (MSE)  - (랜덤 포레스트)  : 0.0037711989327507893
+                                            <br>R-squared (결정 계수) - (랜덤 포레스트) : 0.9569777952016687
+
+                                            <br>그리드 서치를 활용한다고 하여 무조건적으로 최고의 결과가 나타나진 않음.
                                             <br>
-                                            <br>
-                                            평균 제곱 오차 (MSE) - (랜덤 포레스트): 0.0037239872298574987
-                                            <br>
-                                            <br>
-                                            R-squared (결정 계수) - (랜덤 포레스트): 0.9575163909074306
-                                            <br>
-                                            <br>랜덤 포레스트보다 XGBoost 그라디언 부스트가 더 높게 나왔다.
                                         </p>
                                    </div>
                                    <img src="./images/winplaceperc_rf.png" alt="이미지 없음" width="600px" height="400px">
